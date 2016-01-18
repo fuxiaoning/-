@@ -1,25 +1,72 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="解锁项目" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDG-de-MA3">
+                                <rect key="frame" x="84" y="79" width="200" height="53"/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.80000000000000004" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="mtz-MT-5Dl"/>
+                                </constraints>
+                                <state key="normal" title="设置密码"/>
+                                <connections>
+                                    <action selector="btnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GFY-50-C30"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jty-tm-j6G">
+                                <rect key="frame" x="84" y="158" width="200" height="53"/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.80000000000000004" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="rwm-Yw-hca"/>
+                                </constraints>
+                                <state key="normal" title="验证密码"/>
+                                <connections>
+                                    <action selector="btnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vhs-s3-pp5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="249-ps-WYE">
+                                <rect key="frame" x="84" y="240" width="200" height="53"/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.80000000000000004" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="重设密码"/>
+                                <connections>
+                                    <action selector="btnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XB0-RT-Dzl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jty-tm-j6G" firstAttribute="top" secondItem="aDG-de-MA3" secondAttribute="bottom" constant="26" id="4DG-n2-OOQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="249-ps-WYE" secondAttribute="bottom" constant="374" id="A0M-Ae-cYR"/>
+                            <constraint firstItem="jty-tm-j6G" firstAttribute="trailing" secondItem="249-ps-WYE" secondAttribute="trailing" id="EZw-0v-qFh"/>
+                            <constraint firstItem="jty-tm-j6G" firstAttribute="leading" secondItem="aDG-de-MA3" secondAttribute="leading" id="Q6V-j6-Oaq"/>
+                            <constraint firstItem="249-ps-WYE" firstAttribute="leading" secondItem="jty-tm-j6G" secondAttribute="leading" id="VOX-y6-oVq"/>
+                            <constraint firstItem="aDG-de-MA3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="59" id="aWh-M5-fnW"/>
+                            <constraint firstItem="aDG-de-MA3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="68" id="crl-Ga-cMx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aDG-de-MA3" secondAttribute="trailing" constant="75" id="fGW-aW-PNZ"/>
+                            <constraint firstItem="249-ps-WYE" firstAttribute="top" secondItem="jty-tm-j6G" secondAttribute="bottom" constant="29" id="fwt-UY-guV"/>
+                            <constraint firstItem="jty-tm-j6G" firstAttribute="trailing" secondItem="aDG-de-MA3" secondAttribute="trailing" id="ycU-9Z-oMw"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="244.5" y="301.5"/>
         </scene>
     </scenes>
 </document>
